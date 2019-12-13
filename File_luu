@@ -1,0 +1,17 @@
+B1: touch File
+B2: pipenv shell
+B3:  . /home/dphuong/.local/share/virtualenvs/test_face_recognition-DSaZVrdt/bin/activate
+B4: pipenv install
+B5:  cd ../
+B6: su intekinstitute
+B7: sudo su
+B8: exit 
+B9: exit (enviroment)
+B10: pipenv --rm
+B11: pipenv --three
+B12: pipenv install dlib
+B13: pipenv install face_recognition
+B14: pipenv shell
+B15: . /home/dphuong/.local/share/virtualenvs/test_face_recognition-DSaZVrdt/bin/activate
+B16: python
+
