@@ -3,8 +3,6 @@ import face_recognition as fr
 
 def compare_faces(file1, file2):
     # Load the jpg files into numpy arrays
-    # file1 = './img/known/massu.jpg'
-    # file2 = './img/unknown/massu_31.jpg'
     image1 = fr.load_image_file(file1)
     image2 = fr.load_image_file(file2)
 
