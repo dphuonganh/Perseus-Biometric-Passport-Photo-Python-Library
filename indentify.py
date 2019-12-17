@@ -9,8 +9,8 @@ steve_face_encoding = face_recognition.face_encodings(image_of_steve[0])
 
 # create array of encodings and names (tạo mảng mã hóa và tên)
 known_face_encodings = [
-    bill_face_encoding,
-    steve_face_encoding
+    "bill_face_encoding"
+    "steve_face_encoding"
 ]
 
 known_face_names = [
@@ -34,7 +34,6 @@ draw = ImageDraw.Draw(pil_image)
 # Loop through faces in test image (Lặp lại qua các khuôn mặt trong hình ảnh thử nghiệm)
 for(top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
     print(known_face_encodings)
-    print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
     print(face_encodings)
     matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
 

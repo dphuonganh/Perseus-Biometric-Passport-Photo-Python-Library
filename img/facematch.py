@@ -2,7 +2,11 @@ import face_recognition as fr
 # 2. facematch.py
 
 def compare_faces(file1, file2):
-    # Load the jpg files into numpy arrays
+    """
+    Load the jpg files into numpy arrays
+    Provide 2 arguments are the name and the path file
+    Check the path file whether it exists or not
+    """
     image1 = fr.load_image_file(file1)
     image2 = fr.load_image_file(file2)
 
@@ -11,17 +15,19 @@ def compare_faces(file1, file2):
     image2_encoding = fr.face_encodings(image2)[0]
     
     # Compare faces and return True / False
+    # Check the image file is valid or not 
     results = fr.compare_faces([image1_encoding], image2_encoding)  
     if results[0]:
-        return 'This is Massu cute'
+        return 'Invalid!'
     else:
-        return 'This is not Massu cute'
+        return 'Valid cannot error!'
 
 
 def main():
     file1 = './known/massu.jpg'
     file2 = './unknown/massu_31.jpg'
     print(compare_faces(file1, file2))
+
 
 
 if __name__ == "__main__":
